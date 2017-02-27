@@ -12,7 +12,8 @@ import { Component, OnChange  } from '@angular/core';
   // template: '<counter [num]="inum" (numChange)="inum=$event"></counter>AppNum={{inum}}'
 
   //2 way binding method 3
-  template: '<counter [num]="inum" (numChange) = "onModelUpdate($event)" ></counter>AppNum={{inum}}'
+  //template: '<counter [num]="inum" (numChange) = "onModelUpdate($event)" ></counter>AppNum={{inum}}'
+   templateUrl: 'app/app.component.html'
 })
 export class AppComponent implements OnChange {
   inum = 0;
