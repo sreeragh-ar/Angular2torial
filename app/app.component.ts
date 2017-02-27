@@ -2,13 +2,23 @@ import { Component, OnChange  } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: '<counter [num]="inum" (result)="ngOnChange($event)">come on</counter>init{{pc}}'
+  //one way binding
+  /*template: '<counter [num]="inum"></counter>AppNum={{inum}}*/
+
+  //2 way binding method 1
+  /*template: '<counter ([num])="inum"></counter>AppNum={{inum}}'*/
+
+  //2-way binding method 2
+  // template: '<counter [num]="inum" (numChange)="inum=$event"></counter>AppNum={{inum}}'
+
+  //2 way binding method 3
+  template: '<counter [num]="inum" (numChange) = "onModelUpdate($event)" ></counter>AppNum={{inum}}'
 })
 export class AppComponent implements OnChange {
   inum = 0;
   name:string = "A0099";
   pc = 0;
-  ngOnChange(val: number) {
-    this.pc = val;
+  onModelUpdate(val: number) {
+    this.inum = val;
   }
 }
