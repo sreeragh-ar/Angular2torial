@@ -22,4 +22,9 @@ export class AppComponent implements OnChange {
   onModelUpdate(val: number) {
     this.inum = val;
   }
+  formValue = JSON.stringify({});
+
+  onSubmit(form : NgForm) {
+    this.formValue = JSON.stringify(form.value);
+  }
 }

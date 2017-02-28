@@ -27,6 +27,7 @@ System.config({
     '@angular/core': 'unpkg:@angular/core@'+angularVersion,
     '@angular/compiler': 'unpkg:@angular/compiler@'+angularVersion,
     '@angular/common': 'unpkg:@angular/common@'+angularVersion,
+    '@angular/forms': 'unpkg:@angular/forms@'+angularVersion,
     '@angular/platform-browser': 'unpkg:@angular/platform-browser@'+angularVersion,
     '@angular/platform-browser-dynamic': 'unpkg:@angular/platform-browser-dynamic@'+angularVersion,
     'rxjs': 'unpkg:rxjs@5.0.0-beta.12',

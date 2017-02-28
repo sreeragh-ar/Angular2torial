@@ -1,1 +1,16 @@
-<counter [num]="inum" (numChange) = "onModelUpdate($event)" ></counter>AppNum={{inum}}
+<section>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+<label for="firstName">first Name</label>
+<input name="SecName" type="text" id="Fame" ngModel>
+<button type="submit">submit</button>
+</form>
+Form Value: {{formValue}}
+</section>
+<!-- <section >
+  <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" ngModel>
+    <button type="submit">Submit</button>
+  </form>
+  Form Value: {{formValue}}
+</section> -->
