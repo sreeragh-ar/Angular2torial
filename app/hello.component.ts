@@ -3,7 +3,7 @@ import {GreeterService} from './greeter.service'
 
 @Component({
   selector: 'hello',
-  template: '<b>Hello{{name}} this is {{msg}}</b>'
+  template: '<b>Hello{{name}} </b>'
 })
 export class HelloComponent {
   @Input()
