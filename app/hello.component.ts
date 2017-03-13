@@ -3,7 +3,7 @@ import {GreeterService} from './greeter.service'
 
 @Component({
   selector: 'hello',
-  template: '<b>Hello{{name}} </b>'
+  template: '<b>Hello{{name}}!!!!<ng-content></ng-content>!!!</b>'
 })
 export class HelloComponent {
   @Input()
