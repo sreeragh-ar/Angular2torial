@@ -6,7 +6,7 @@ import {GreeterService} from './greeter.service'
   templateUrl: 'app/hello.component.html',
   styles:[`
     .colorText {
-      color:blue;
+      color:green;
     }
     .specialFont {
       font-family: "Times New Roman";
