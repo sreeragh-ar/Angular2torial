@@ -3,11 +3,13 @@ import {GreeterService} from './greeter.service'
 
 @Component({
   selector: 'hello',
-  template: '<b>Hello{{name}}!!!!<ng-content select="footer"></ng-content><ng-content select=".content"></ng-content><ng-content select="header"></ng-content>!!!</b>'
+  templateUrl: 'app/hello.component.html'
 })
 export class HelloComponent {
   @Input()
   name:string = "";
+  @Input()
+  txtColor:string = 'black';
   constructor(private greeterService: GreeterService) {}
   msg = this.greeterService.getMessage();
 }
