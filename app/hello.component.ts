@@ -10,6 +10,9 @@ export class HelloComponent {
   name:string = "";
   @Input()
   txtColor:string = 'black';
+  @Input()
+  customStyles = {};
+  
   constructor(private greeterService: GreeterService) {}
   msg = this.greeterService.getMessage();
 }

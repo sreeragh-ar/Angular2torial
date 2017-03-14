@@ -19,6 +19,9 @@ export class AppComponent implements OnChange {
   inum = 0;
   name:string = "A0099";
   pc = 0;
+  styling = {'color':'green',
+             'font-weight': 'bold'
+}
   onModelUpdate(val: number) {
     this.inum = val;
   }
