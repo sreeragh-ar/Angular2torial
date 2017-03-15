@@ -14,6 +14,7 @@ import {GreeterService} from './greeter.service'
   ]
 })
 export class HelloComponent {
+  condition: boolean = true;
   @Input()
   name:string = "";
   @Input()
