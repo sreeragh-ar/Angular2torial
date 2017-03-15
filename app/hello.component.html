@@ -1,2 +1,6 @@
 <p *ngIf="condition">condition is true</p>
 <p [ngClass]="{colorText:true, specialFont:false}">Hello{{name}}!!!!!!!</p>
+<p>Iterable is</p>
+<div *ngFor="let elem of iterable">
+  {{elem.title}}
+</div>

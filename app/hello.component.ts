@@ -21,7 +21,12 @@ export class HelloComponent {
   txtColor:string = 'black';
   @Input()
   customStyles = {};
-
+  iterable = [
+    {title:'a', author:'A'},
+    {title:'b', author:'B'},
+    {title:'c', author:'C'},
+    {title:'d', author:'D'}
+  ]
   constructor(private greeterService: GreeterService) {}
   msg = this.greeterService.getMessage();
 }
