@@ -1,10 +1,10 @@
 <p *ngIf="condition">condition is true</p>
 <p [ngClass]="{colorText:true, specialFont:false}">Hello{{name}}!!!!!!!</p>
 <p>Iterable is</p>
-<div *ngFor="let elem of iterable">
-  {{elem.title}}
+<div *ngFor="let elem of iterable; let i = index; let isOdd = odd;">
+  {{i}}:{{elem.title}} is {{isOdd}}
 </div>
 
-<template ngFor [ngForOf]="iterable" let-elem>
+<!--<template ngFor [ngForOf]="iterable" let-elem>
   <div>{{elem.author}}</div>
-</template>
+</template>-->
