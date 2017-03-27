@@ -4,3 +4,7 @@
 <div *ngFor="let elem of iterable">
   {{elem.title}}
 </div>
+
+<template ngFor [ngForOf]="iterable" let-elem>
+  <div>{{elem.author}}</div>
+</template>
