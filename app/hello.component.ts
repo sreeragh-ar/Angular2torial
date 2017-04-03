@@ -21,12 +21,14 @@ export class HelloComponent {
   txtColor:string = 'black';
   @Input()
   customStyles = {};
-  iterable = [
-    {title:'a', author:'A'},
-    {title:'b', author:'B'},
-    {title:'c', author:'C'},
-    {title:'d', author:'D'}
-  ]
+  @Input()
+  item = {};
   constructor(private greeterService: GreeterService) {}
   msg = this.greeterService.getMessage();
+  ngOnInit() {
+    console.log('component created', this.item)
+  }
+  ngOnDestroy() {
+    console.log('destroying component', this.item)
+  }
 }

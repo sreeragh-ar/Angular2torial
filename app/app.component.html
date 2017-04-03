@@ -1,6 +1,10 @@
-<hello name="pp" txtColor="red" [customStyles]="styling" #pp>
+<!--<hello name="pp" txtColor="red" [customStyles]="styling" #pp>
+
   <header>This is transcluded content using custom tag as selector</header>
   <div class="content">Using class  as selector'</div>
   <footer>Transcluded content ends..</footer>
+</hello>-->
+<button (click)="addOther()">press to add</button>
+<hello *ngFor="let elem of iterable;  trackBy: trackById" [item]="elem">
 </hello>
-message from pp is {{ pp.msg}}
+
