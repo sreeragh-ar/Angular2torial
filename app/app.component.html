@@ -4,7 +4,16 @@
   <div class="content">Using class  as selector'</div>
   <footer>Transcluded content ends..</footer>
 </hello>-->
-<button (click)="addOther()">press to add</button>
+<!--<button (click)="addOther()">press to add</button>
 <hello *ngFor="let elem of iterable;  trackBy: trackById" [item]="elem">
-</hello>
+</hello>-->
+<button (click)="setTab(1)">tab 1</button>
+<button (click)="setTab(2)">tab 2</button>
+<button (click)="setTab(3)">tab 3</button>
 
+<div [ngSwitch]="tab">
+  <p *ngSwitchCase="1">selected tab 1</p>
+  <p *ngSwitchCase="2">selected tab 2</p>
+  <p *ngSwitchCase="3">selected tab 3</p>
+  <p *ngSwitchDefault>select a tab </p>
+</div>

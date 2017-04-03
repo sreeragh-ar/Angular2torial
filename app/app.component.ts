@@ -1,4 +1,4 @@
-import { Component, OnChange  } from '@angular/core';
+import { Component, OnChange, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -30,30 +30,10 @@ export class AppComponent implements OnChange {
   onSubmit(form : NgForm) {
     this.formValue = JSON.stringify(form.value);
   }
+  @Input()
+  tab:any =0;
 
-  iterable = [
-    {title:'a', author:'A', id:1},
-    {title:'b', author:'B', id:2},
-    {title:'c', author:'C', id:3},
-    {title:'d', author:'D', id:4}
-  ]
-  other =  [
-    
-    {title:'b', author:'B', id:2},
-    {title:'e', author:'E', id:5},
-    {title:'f', author:'F', id:6},
-    {title:'g', author:'G', id:7},
-    {title:'h', author:'H', id:8},
-    {title:'a', author:'A', id:1}
-  ]
-  addOther(){
-    if(this.other.length !=0){
-      
-      this.iterable = this.other;
-    }
-  }
-
-  trackById(index: number, elem: any): number {
-    return elem.id;// return index for trackby index
+  setTab(n:any) {
+    this.tab = n;
   }
 }
