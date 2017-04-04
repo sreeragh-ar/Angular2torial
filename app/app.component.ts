@@ -13,27 +13,32 @@ import { Component, OnChange, Input } from '@angular/core';
 
   //2 way binding method 3
   //template: '<counter [num]="inum" (numChange) = "onModelUpdate($event)" ></counter>AppNum={{inum}}'
-   templateUrl: 'app/app.component.html'
+  templateUrl: 'app/app.component.html'
 })
 export class AppComponent implements OnChange {
   inum = 0;
-  name:string = "A0099";
+  name: string = "A0099";
   pc = 0;
-  styling = {'color':'green',
-             'font-weight': 'bold'
-}
+  styling = {
+    'color': 'green',
+    'font-weight': 'bold'
+  }
   onModelUpdate(val: number) {
     this.inum = val;
   }
   formValue = JSON.stringify({});
 
-  onSubmit(form : NgForm) {
+  onSubmit(form: NgForm) {
     this.formValue = JSON.stringify(form.value);
   }
   @Input()
-  tab:any =0;
-
-  setTab(n:any) {
-    this.tab = n;
+  tabSelected: any = 0;
+  tabs = [
+    { title: 'tab1', content: 'tab content1' },
+    { title: 'tab2', content: 'tab content2' },
+    { title: 'tab3', content: 'tab content3' }
+  ];
+  setTabSelected(n: any) {
+    this.tabSelected = n;
   }
 }
